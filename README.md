@@ -1,8 +1,8 @@
 # 2023 testwarez solid pageobject
 Starting point for Solid Page Object workshop prepared for testwarez-2023. You can choose any of the three frameworks to work with:
-* [selenium](https://www.selenium.dev/) - if that's your choice, `selenium-master` is your starting point
-* [selenide](https://selenide.org/) - if that's your choice, `selenide-master` is your starting point
-* [playwright](https://playwright.dev/java/) - if that's your choice, `playwright-master` is your starting point
+* [selenium](https://www.selenium.dev/) - if that's your choice, [selenium-master](https://github.com/RemigiuszDudek/2023-testwarez-solid-pageobject/tree/selenium-master) is your starting point
+* [selenide](https://selenide.org/) - if that's your choice, [selenide-master](https://github.com/RemigiuszDudek/2023-testwarez-solid-pageobject/tree/selenide-master) is your starting point
+* [playwright](https://playwright.dev/java/) - if that's your choice, [playwright-master](https://github.com/RemigiuszDudek/2023-testwarez-solid-pageobject/tree/playwright-master) is your starting point
 
 # Instructions
 1. Checkout the code
