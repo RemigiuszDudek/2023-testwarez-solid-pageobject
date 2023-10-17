@@ -10,7 +10,11 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# 2023 TestWarez starting points
+# 2023 TestWarez workshop goals
+During our workshop we will try to meet two goals:
+* create automated tests for a demo e-commerce application
+* create automated tests for a certain [mui](https://mui.com/material-ui/getting-started/) component 
+
 You can choose any of the three frameworks to work with:
 * [selenium](https://www.selenium.dev/) - if that's your choice, `selenium-master` is your starting point
 * [selenide](https://selenide.org/) - if that's your choice, `selenide-master` is your starting point
