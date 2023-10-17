@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [2023 TestWarez starting points](#2023-testwarez-starting-points)
+- [2023 TestWarez workshop goals](#2023-testwarez-workshop-goals)
 - [Preconditions](#preconditions)
   - [Configure java/maven environment](#configure-javamaven-environment)
   - [Configure IDE](#configure-ide)
