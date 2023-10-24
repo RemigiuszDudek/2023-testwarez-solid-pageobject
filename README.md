@@ -49,7 +49,7 @@ user of whatever integrated development environment you choose.
 4. Make sure that the `SwagLabsTest` is passing
 5. You're ready to get started!!!
 
-Looking forward to coding with You.
+Looking forward to coding with You!
 
 # Useful playwright commands
 
