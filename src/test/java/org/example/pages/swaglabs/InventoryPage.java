@@ -7,16 +7,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class InventoryPage extends BasePage {
-    WebElement inventoryContainer;
+    By inventoryContainer = By.id("inventory_container");
     public InventoryPage(WebDriver driver) {
         super(driver);
-
-        inventoryContainer = driver.findElement(By.id("inventory_container"));
 
     }
 
     @Override  public boolean OnThePage() {
-
-        return inventoryContainer.isDisplayed();
+        return elementVisible(inventoryContainer);
     }
 }

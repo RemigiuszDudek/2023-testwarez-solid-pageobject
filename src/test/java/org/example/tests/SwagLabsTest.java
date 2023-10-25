@@ -42,7 +42,22 @@ class SwagLabsTest extends TestBase {
 
         LoginPage loginPage = new LoginPage(webDriver);
 
-        assertThat(loginPage.LogIn(user).OnThePage()).isTrue(); //"user should be on the Inventory Page"
+        assertThat(loginPage
+                .LogIn(user)
+                .OnThePage())
+                .isTrue(); //"user should be on the Inventory Page"
+    }
+
+    @Test
+    public void loginToSwagLabsNegative(){
+        User user = new User("standard_user", "aaa");
+
+        LoginPage loginPage = new LoginPage(webDriver);
+
+        assertThat(loginPage
+                .LogIn(user)
+                .OnThePage())
+                .isFalse(); //"user should not be on the Inventory Page"
     }
 }
 
