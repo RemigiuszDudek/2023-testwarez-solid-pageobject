@@ -9,5 +9,6 @@ class SwagLabsTest extends TestBase {
     @Test
     public void openSwagPage() {
         assertThat(true).isTrue();
+
     }
 }
