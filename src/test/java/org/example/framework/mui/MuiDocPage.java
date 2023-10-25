@@ -12,7 +12,7 @@ public class MuiDocPage {
     public MuiDocPage(Page page) {
         page.navigate("https://mui.com/material-ui/react-table/");
 
-        this.basicTable = new BasicTable(page);
+        this.basicTable = new BasicTable(page.locator("#BasicTable"));
     }
 
     public List<Desert> getBasicTableContent() {

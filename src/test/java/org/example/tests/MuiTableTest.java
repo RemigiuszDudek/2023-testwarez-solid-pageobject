@@ -20,8 +20,8 @@ public class MuiTableTest extends PlaywrightTest {
                 new Desert("Gingerbread", 356, 16, 49, 3.9f)
         );
 
-        assertThat(new MuiDocPage(this.page).getBasicTableContent()).isEqualTo(
-                expectedDeserts
-        );
+        MuiDocPage muiDocPage = new MuiDocPage(this.page);
+
+        assertThat(muiDocPage.getBasicTableContent()).isEqualTo(expectedDeserts);
     }
 }
