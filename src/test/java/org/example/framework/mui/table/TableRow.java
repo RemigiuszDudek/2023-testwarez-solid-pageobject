@@ -8,15 +8,11 @@ import java.util.List;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static java.util.regex.Pattern.compile;
 
-public abstract class TableRow<CONTENT> implements Row<CONTENT> {
-    protected final List<? extends TableCell<String>> cells;
-
+public record TableRow(
+        List<? extends TableCell<String>> cells
+) {
     public TableRow(Locator rowRoot) {
+        this(rowRoot.locator(".MuiTableCell-root").all().stream().map(TableTextCell::new).toList());
         assertThat(rowRoot).hasClass(compile("MuiTableRow-root"));
-
-        this.cells = rowRoot.locator(".MuiTableCell-root").all().stream().map(TableTextCell::new).toList();
     }
-
-    @Override
-    public abstract CONTENT getContent();
 }
