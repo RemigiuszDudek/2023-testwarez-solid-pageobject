@@ -2,6 +2,7 @@ package org.example.tests;
 
 import org.example.framework.PlaywrightTest;
 import org.example.framework.TestUser;
+import org.example.framework.swag.InvalidLoginPage;
 import org.example.framework.swag.InventoryPage;
 import org.example.framework.swag.LoginPage;
 import org.junit.jupiter.api.Test;
@@ -13,8 +14,15 @@ class SwagLabsTest extends PlaywrightTest {
 
     @Test
     public void openSwagPage() {
-        InventoryPage inventoryPage = new LoginPage(this.page).login(USER);
+        InventoryPage inventoryPage = LoginPage.open(this.page).login(USER);
 
         assertThat(inventoryPage).isNotNull();
+    }
+
+    @Test
+    public void loginWithInvalidCreds() {
+        InvalidLoginPage invalidLoginPage = LoginPage.open(this.page).loginWithInvalidCredentials();
+
+        assertThat(invalidLoginPage).isNotNull();
     }
 }
