@@ -10,12 +10,13 @@ import static java.time.Duration.of;
 import static java.time.temporal.ChronoUnit.SECONDS;
 
 public class TestBase {
-    protected WebDriver webDriver;
+
+    public static WebDriver webDriver;
 
     @BeforeEach
     public void setupContext() {
-        this.webDriver = webDriverFactory(false);
-        webDriver.get("https://www.saucedemo.com/");
+        webDriver = webDriverFactory(false);
+        webDriver.get("https://mui.com/material-ui/react-table/");
     }
 
     private static WebDriver webDriverFactory(boolean isHeadless) {
@@ -32,4 +33,5 @@ public class TestBase {
     public void teardownContext() {
         this.webDriver.quit();
     }
+
 }
