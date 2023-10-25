@@ -15,7 +15,7 @@ public class TestBase {
     @BeforeEach
     public void setupContext() {
         this.webDriver = webDriverFactory(false);
-        webDriver.get("https://mui.com/material-ui/react-table/");
+        webDriver.get("https://www.saucedemo.com/");
     }
 
     private static WebDriver webDriverFactory(boolean isHeadless) {
