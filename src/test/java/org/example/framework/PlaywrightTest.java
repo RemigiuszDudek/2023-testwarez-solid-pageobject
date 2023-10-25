@@ -8,21 +8,21 @@ import org.junit.jupiter.api.BeforeEach;
 
 import java.nio.file.Path;
 
-public class PlaywrightTestBase {
+public class PlaywrightTest {
     private static Browser BROWSER;
     protected BrowserContext context;
     protected Page page;
 
     @BeforeAll
     public static void setupPlaywright() {
-        PlaywrightTestBase.BROWSER = Playwright.create().chromium().launch(
-                new BrowserType.LaunchOptions().setHeadless(false)
+        PlaywrightTest.BROWSER = Playwright.create().chromium().launch(
+                new BrowserType.LaunchOptions().setHeadless(true)
         );
     }
 
     @BeforeEach
     public void setupContext() {
-        this.context = PlaywrightTestBase.BROWSER.newContext(new Browser.NewContextOptions()
+        this.context = PlaywrightTest.BROWSER.newContext(new Browser.NewContextOptions()
                 .setRecordVideoDir(Path.of("target", "playwright", "video"))
         );
         this.context.tracing().start(new Tracing.StartOptions()
@@ -31,7 +31,7 @@ public class PlaywrightTestBase {
                 .setSources(true)
         );
         page = this.context.newPage();
-        page.navigate("https://www.saucedemo.com/");
+//        page.navigate("https://www.saucedemo.com/");
     }
 
     @AfterEach
@@ -42,6 +42,6 @@ public class PlaywrightTestBase {
 
     @AfterAll
     public static void tearDownPlaywright() {
-        PlaywrightTestBase.BROWSER.close();
+        PlaywrightTest.BROWSER.close();
     }
 }
