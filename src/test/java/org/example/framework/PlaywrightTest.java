@@ -16,7 +16,7 @@ public class PlaywrightTest {
     @BeforeAll
     public static void setupPlaywright() {
         PlaywrightTest.BROWSER = Playwright.create().chromium().launch(
-                new BrowserType.LaunchOptions().setHeadless(true)
+                new BrowserType.LaunchOptions().setHeadless(false)
         );
     }
 
